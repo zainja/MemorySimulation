@@ -14,7 +14,7 @@ public class LRU extends Memory implements Cache{
         this.cache.forEach((n) -> System.out.print(" "+n +" "));
         System.out.println();
         if(this.inCache(address)) {
-            System.out.printf("address %d Cache hit ", address);
+            System.out.print("LRU hit ");
             this.cache.remove(address);
             this.cache.add(address);
         }else {

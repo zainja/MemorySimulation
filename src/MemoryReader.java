@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class MemoryReader {
-    public static void main (String[] args) throws FileNotFoundException, IOException, NullPointerException {
+    public static void main (String[] args) throws IOException, NullPointerException {
         String strategy;
         String fileName;
         if (args.length == 2){
@@ -31,10 +31,11 @@ public class MemoryReader {
         String line = bufferedReader.readLine();
         while (line != null){
             int address = Integer.parseInt(line);
+            System.out.printf("%04X ", address);
             System.out.println(memory.lookup(address));
             line = bufferedReader.readLine();
         }
-        System.out.printf("Memory Hit: %d \nMethod Name:%s", memory.getHitCount(), memory.getName());
+        System.out.printf("\nMemory Hit: %d \nMethod Name: %s", memory.getHitCount(), memory.getName());
 
     }
 }

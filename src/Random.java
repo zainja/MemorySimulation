@@ -12,7 +12,7 @@ public class Random extends Memory implements Cache{
     @Override
     public String lookup(int address) {
         if(this.inCache(address)){
-            System.out.print("Random Access ");
+            System.out.print("Random hit ");
         }else {
             super.lookup(address);
             if (cache.size() < this.cacheSize)

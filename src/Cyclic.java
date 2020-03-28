@@ -31,7 +31,7 @@ public class Cyclic extends Memory implements Cache {
                     evictionPointer = 0;
                 }
             }
-        }
+        }else System.out.print("Cyclic hit ");
         try {
             return Cyclic.hashAddress(address);
         }catch (Exception e){

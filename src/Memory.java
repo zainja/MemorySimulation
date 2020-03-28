@@ -23,7 +23,7 @@ public class Memory {
 
     public String lookup (int address) {
         this.hitCount ++;
-        System.out.printf("address %d Memory hit ", address);
+        System.out.print("Memory hit ");
         return Integer.toHexString(address);
     }
     public static String hashAddress(int address) throws Exception{
